@@ -1,0 +1,246 @@
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100%;
+}
+
+#map {
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#info {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid rgb(83, 83, 83);
+  border-radius: 10px;
+  background-color: white;
+  position: absolute;
+  bottom: 5%;
+  right: 1%;
+  box-shadow: 0px 0px 10px black;
+}
+
+#legend {
+  padding: 15px;
+  border: 1px solid rgb(83, 83, 83);
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  bottom: 5%;
+  left: 1%;
+}
+
+#legend-items {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+}
+
+.legend-element {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+table, tr, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 4px 6px;
+}
+
+.desc {
+  background-color: darkgray;
+}
+
+
+
+#lengthButton {
+  position: absolute;
+  top: 20%;
+  left: 1%;
+}
+
+#areaButton {
+  position: absolute;
+  top: 25%;
+  left: 1%;
+}
+
+.ol-tooltip {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  color: white;
+  padding: 4px 8px;
+  opacity: 0.7;
+  white-space: nowrap;
+  font-size: 12px;
+  cursor: default;
+  user-select: none;
+}
+.ol-tooltip-measure {
+  opacity: 1;
+  font-weight: bold;
+}
+.ol-tooltip-static {
+  background-color: #ffcc33;
+  color: black;
+  border: 1px solid white;
+}
+.ol-tooltip-measure:before,
+.ol-tooltip-static:before {
+  border-top: 6px solid rgba(0, 0, 0, 0.5);
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  margin-left: -7px;
+  left: 50%;
+}
+.ol-tooltip-static:before {
+  border-top-color: #ffcc33;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#opacities {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: white;
+  flex-direction: column;
+  width: 240px;
+  height: 210px;
+  border: 1px solid black;
+  bottom: 287px;
+  left: 14px;
+  box-shadow: 0px 0px 10px black;
+}
+
+.opacities_title {
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#checkboxes {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  row-gap: 14px;
+  justify-content: center;
+  /* padding: 10px 0 10px 0; */
+  box-sizing: border-box;
+}
+
+#opacities {
+  display: flex;
+  flex-direction: column;
+}
+
+.vis_range {
+  width: 200px;
+}
+
+#op_button {
+  position: absolute;
+  height: 30px;
+  bottom: 200px;
+  left: 1%;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black
+}
+
+#op_button:hover {
+  cursor: pointer;
+  background-color: rgb(218, 218, 218);
+}
+
+.header {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  font-family: 't132';
+  padding-left: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: rgb(122, 255, 122);
+  border-bottom: 1px solid grey;
+}
+
+#measures {
+  padding: 10px;
+  border: 1px solid black;
+  position: absolute;
+  top: 21%;
+  left: 1%;
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0px 0px 10px black;
+}
+
+.measures_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.measure_button {
+  border-radius: 4px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.measure_button:hover {
+  cursor: pointer;
+  background-color: rgb(218, 218, 218);
+}
+
+.active {
+  background-color: rgb(152, 255, 152) !important; 
+}
+
+.active_m {
+  background-color: rgb(152, 255, 152) !important; 
+}
+
+.open-measures_button {
+  position: absolute;
+  top: 17%;
+  left: 1%;
+  height: 30px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black
+}
+
+.open-measures_button:hover {
+  cursor: pointer;
+  background-color: rgb(218, 218, 218);
+}
+
+.opened {
+  display: flex !important;
+}

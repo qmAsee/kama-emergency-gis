@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/ol@v9.1.0/dist/ol.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v9.1.0/ol.css">
+    <link rel="stylesheet" href="https://unpkg.com/ol-layerswitcher@4.1.1/dist/ol-layerswitcher.css" />
+    <link rel="stylesheet" href="./index.css">
+    <title>Quick Start</title>
+  </head>
+  <body>
+    <header class="header">Населенные пункты, находящиеся под угрозой затопления в бассейне р. Кама</header>
+    <div class="map" id="map"></div>
+    <div id="info"></div>
+    <div id="legend"><div id="legend-items"></div><div id="checkboxes"></div><button type="button" id="op_button">Прозрачность слоев</button></div>
+    <button class="open-measures_button">Измерение</button>
+    <div id="measures">
+      <button class="measure_button measure_active" style="margin-bottom: 5px;">Режим измерений</button>
+      <button class="measure_button delete_measure" style="margin-bottom: 15px;">Очистить измерения</button>
+      <form class="measures_form">
+        <label for="type">Тип геометрии</label>
+        <select id="type" style="margin-bottom: 15px;">
+          <option value="LineString">Длина (Линия)</option>
+          <option value="Polygon">Площадь (Полигон)</option>
+        </select>
+        <div style="display: flex; align-items: center; gap: 4px">
+          <label for="segments">Отображать длину сегмента</label>
+          <input type="checkbox" id="segments" checked />
+        </div>
+        <div style="display: flex; align-items: center; gap: 4px">
+          <label for="clear">Очищать предыдушие измерения</label>
+          <input type="checkbox" id="clear" checked />
+        </div>
+      </form>
+    </div>
+    <div id="opacities" class="hidden"></div>
+   
+    <!-- <div class="opacities">
+      <span class="opacities_title">Прозрачность слоев</span>
+
+      <label for="o_settlements_sqr">Населенные пункты (полигоны)</label>
+      <input id="o_settlements_sqr" type="range" min="0" max="1" step="0.01" value="1">
+
+      <label for="o_settlements_pnt">Населенные пункты (точки)</label>
+      <input id="o_settlements_pnt" type="range" min="0" max="1" step="0.01" value="1">
+
+      <label for="o_rivers">Реки</label>
+      <input id="o_rivers" type="range" min="0" max="1" step="0.01" value="1">
+
+      <label for="o_water_objects">Водоемы</label>
+      <input id="o_water_objects" type="range" min="0" max="1" step="0.01" value="1">
+
+      <label for="o_kama_bassin">Бассейн р. Кама</label>
+      <input id="o_kama_bassin" type="range" min="0" max="1" step="0.01" value="1">
+    </div> -->
+
+    <script src="https://unpkg.com/ol-layerswitcher@4.1.1"></script>
+    
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
