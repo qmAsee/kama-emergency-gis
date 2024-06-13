@@ -12,3 +12,5 @@
 - Vanilla JS
 - OpenLayers (картографическая библиотека)
 - HTML/CSS
+- PostgreSQL/PostGIS
+- Geoserver
